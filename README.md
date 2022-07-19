@@ -1,5 +1,3 @@
-PREVIEWToggle Mode
-
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="BATTLESHIP_CON_REACT__0"></a>BATTLESHIP CON REACT ⚓⚓⚓</h1>
 <p class="has-line-data" data-line-start="2" data-line-end="3">Pequeño juego de Battleship realizado para 4geeksAcademy.</p>
 <h2 class="code-line" data-line-start=3 data-line-end=4 ><a id="Reglas_del_Juego_3"></a>Reglas del Juego</h2>
