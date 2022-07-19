@@ -2,23 +2,19 @@
 @import './board.css';
 @import './replicas.css';
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lexend+Tera&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-/* NEW FONTS */
-
-@import url('https://fonts.googleapis.com/css2?family=Asul&family=Chivo:wght@300;400;700;900&family=Libre+Franklin&display=swap');
-/* font-family: 'Asul', sans-serif;
-font-family: 'Chivo', sans-serif; */
 
 :root {
-  --regular: 'Libre Franklin', sans-serif;
-  --headlines: 'Asul', sans-serif;
-  --header: 'Chivo', sans-serif;
+  --regular: 'Inter', sans-serif;;
+  --headlines: 'Roboto', sans-serif;
+  --header: 'Relaway', sans-serif;
   --small-space: 1em;
   --medium-space: 2em;
 }
+
 
 
 
@@ -142,7 +138,7 @@ h2 {
 /* Regular text used in subtitle and tips */
 
 p {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }

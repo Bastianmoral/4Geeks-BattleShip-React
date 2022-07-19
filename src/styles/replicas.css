@@ -57,7 +57,7 @@
 .replica-title {
   font-size: 25px;
   text-transform: capitalize;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--oc-white);
 }
 
@@ -83,7 +83,7 @@ li {
 .player-title {
   font-size: 70px;
   text-transform: capitalize;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--oc-indigo-9);
   text-align: center;
 }
