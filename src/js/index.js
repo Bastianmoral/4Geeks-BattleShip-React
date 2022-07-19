@@ -1,11 +1,14 @@
 //import react into the bundle
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import  WelcomeScreen  from './component/WelcomeScreen.jsx'
-import  Header  from './component/Header.jsx';
-import  Footer  from './component/Footer.jsx';
-import Home from "./component/home.jsx";
-import "../styles/index.css";
+import  WelcomeScreen  from './component/WelcomeScreen.js'
+import  Header  from './component/Header.js';
+import  Footer  from './component/Footer.js';
+import Game from "./game/Game.js";
+import "../styles/board.css";
+import "../styles/open-color.css";
+import "../styles/replicas.css";
+import "../styles/style.css";
 
 const App = () => {
     const [appState, setAppState] = useState('welcome')

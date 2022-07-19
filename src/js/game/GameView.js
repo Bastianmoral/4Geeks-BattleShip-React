@@ -2,18 +2,39 @@ import React from "react";
 import PlayerFleet from './PlayerFleet';
 import PlayerBoard from './PlayerBoard';
 import ComputerBoard from './ComputerBoard';
-import PlayerTips from './PlayerTips';
+import PlayerScore from './PlayerScore';
 
-const GameView = ({}) => {
-    return (
+const GameView = ({  //Varios de estos son hooks o funciones qeu estan en Game.jsx
+    availableShips,
+    selectShip,
+    currentPlace,
+    setCurrentPlace,
+    rotateShip,
+    placeShip,
+    placedShips,
+    startTurn,
+    computerShips,
+    gameState,
+    changeTurn,
+    hitComputer,
+    hitsByPlayer,
+    setHitsByPlayer,
+    hitsByComputer,
+    handleComputerTurn,
+    checkIfGameOver,
+    winner,
+    startAgain,
+    setComputerShips,
+}) => {
+    return ( // se retorna un div con los componentes para hacer el vista del juego. 
         <section id="game-screen">
             {gameState !== 'placement' ? (
-                <PlayerTips
+                <PlayerScore
                     gameState={gameState}
                     hitsByPlayer={hitsByPlayer}
                     hitsByComputer={hitsByComputer}
-                    winner={winner}
                     startAgain={startAgain}
+                    winner={winner}
                 />
             ) : (
                 <PlayerFleet
@@ -31,19 +52,19 @@ const GameView = ({}) => {
                 rotateShip={rotateShip}
                 placeShip={placeShip}
                 placedShips={placedShips}
-                hitByComputer={hitByComputer}
+                hitsByComputer={hitsByComputer}
             />
 
             <ComputerBoard
                 computerShips={computerShips}
-                changeTurn={changeTurn}
-                gameState={gameState}
-                hitComputer={hitComputer}
-                hitByPlayer={hitByPlayer}
+                setComputerShips={setComputerShips}
+                hitsByPlayer={hitsByPlayer}
                 setHitsByPlayer={setHitsByPlayer}
+                gameState={gameState}
+                changeTurn={changeTurn}
+                hitComputer={hitComputer}
                 handleComputerTurn={handleComputerTurn}
                 checkIfGameOver={checkIfGameOver}
-                setComputerShips={setComputerShips}
             />
         </section>
     );

@@ -1,0 +1,71 @@
+@import './open-color.css';
+
+/* TABLEROS O BOARD */
+
+.board {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: 10px solid var(--oc-blue-5);
+  margin: 10px 20px 20px 70px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board div {
+  width: 10%;
+  height: 10%;
+  background: var(--oc-cyan-8);
+  border: 1px solid var(--oc-cyan-1);
+  cursor: crosshair;
+}
+
+
+/* COLOR DE LOS CUADRADOS */
+
+/* CUADRADO VACÍO */
+.board .empty {
+  background-color: var(--oc-blue-0);
+}
+.board .empty:hover {
+  background-color: var(--oc-yellow-9);
+}
+
+/* BARCOS */
+
+.board .ship {
+  background-color: var( --oc-violet-5);
+  border: 3px solid var( --oc-violet-8);
+}
+
+.board .ship:hover {
+  background-color: var( --oc-violet-8);
+}
+
+/* DAÑO   */
+
+.board .hit {
+  background-color: var(--oc-pink-8);
+  border: 1px solid var(--oc-pink-9);
+}
+
+/* ATAQUE PERDIDO */
+
+.board .miss {
+  background-color: var(--oc-gray-4);
+  border: 1px solid var(--oc-gray-2);
+}
+
+/* BARCO DAÑADO */
+
+.board .ship-sunk {
+  background-color: var(--oc-gray-9);
+  border: 1px solid var(--oc-gray-8);
+}
+
+/* POSICIÓN NO PERMITIDA  */
+
+.board .forbidden {
+  background-color: var(--oc-red-2);
+  border: 1px solid var(--oc-red-3);
+}
