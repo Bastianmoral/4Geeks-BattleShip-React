@@ -5,6 +5,11 @@
 Con la intención de darle a un barco enemigo. 💣<br>
 El primero en hundir toda la flota del contrincante ¡gana! 🏆<br>
 Diviertete.</p>
+
+## 🛠 Skills usadas
+Javascripct con React, HTML, CSS, open-color.  
+
+
 <h2 class="code-line" data-line-start=9 data-line-end=10 ><a id="Para_poder_correr_el_juego_9"></a>Para poder correr el juego.</h2>
 <ul>
 <li class="has-line-data" data-line-start="10" data-line-end="11">Hacer un git clone de este repositorio en tu computadora.</li>

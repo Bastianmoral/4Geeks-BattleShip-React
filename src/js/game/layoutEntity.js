@@ -3,6 +3,7 @@ export const BOARD_ROWS = 10;
 export const BOARD_COLUMNS = 10;
 export const BOARD = BOARD_COLUMNS * BOARD_ROWS;
 
+// SE CREAN COMO OBJETOS EL ESTADO DE CADA UNO DE LOS CUADRADOS 
 export const SQUARE_STATE = {
     empty: 'empty',
     ship: 'ship',
@@ -13,6 +14,7 @@ export const SQUARE_STATE = {
     awaiting: 'awaiting',
 };
 
+//CON ESTO PASAMOS A CLASES LOS ESTADOS ANTERIORMENTE CREADOS
 export const stateToClass =  {
     [SQUARE_STATE.empty]:  'empty',
     [SQUARE_STATE.ship]:  'ship',
@@ -31,18 +33,19 @@ export const generateEmptyLayout = () => {
 
 // FUNCIÓN QUE NOS DEVUELVE UN INDICE DE LOS CUADRADOS CLICKADOS Y SUS COORDENADAS. 
 
-export const coordsToIndex = (coordinates) => {
-    const { x, y } = coordinates;
-
-    return y * BOARD_ROWS + x;
-};
-
 export const indexToCoords = (index) => {
     return {
         x: index % BOARD_ROWS,
         y: Math.floor(index / BOARD_ROWS),
     };
 };
+
+export const coordsToIndex = (coordinates) => {
+    const { x, y } = coordinates;
+
+    return y * BOARD_ROWS + x;
+};
+
 //acá retorna las coordenadas(indices) de los barcos del jugador(entity) tomó
 //por convención dentro del desarollo la manera de catalogar este tipo de información es como entidades/entity
 export const entityIndices = (entity) => {
@@ -58,14 +61,15 @@ export const entityIndices = (entity) => {
     return indices;
 };
 
-//con esto checkamos alternativas a la posición de los barcos(entidades) con otras funciones mas adelante.
+//con esto checkamos alternativas a la posición de los barcos(entidades). Esta función la ocupo con otras tres mas adelante (entityInPlace, placeCpuShipInLayout, updateSunkShip)
+//La idea es ir viendo como 
 export const entityIndicesCheker = (entity) => {
     let indices = [];
     for (let i = 0; i < entity.length; i++) {
         const position = 
             entity.orientation === 'vertical'
-            ? coordsToIndex({ y: entity.position.y + i, x: entity.position.x })
-            : coordsToIndex({ y: entity.position.y, x: entity.position.x + i});
+            ? coordsToIndex({ y: entity.position.y + i, x: entity.position.x })  //Se revisa que es lo que hay en estas posiciones 
+            : coordsToIndex({ y: entity.position.y, x: entity.position.x + i});  //Se revisa que es lo que hay en estas posiciones
             indices.push(position);
     }
     return indices;
@@ -178,7 +182,7 @@ export const randomizeShipProps = (ships) => {
 
 
 //CON ESTA FUCNIÓN USAMOS LAS COORDENADAS DE INDICES DE POSISIONAMIETNO Y ORIENTACIÓN DE LOS BARCOS PREVIAMENTE RENDERIZADAS 
-
+//LO QUE HACE ESTA FUNCIÓN ES OTORGARLE UN ESPACIO CORRECTO AL BARCO. QUE NO FALLE SU POSICION. 
 export const placeCpuShipInLayout = (ship, cpuLayout) => {
     let newCpuLayout = cpuLayout.slice();
     entityIndicesCheker(ship).forEach((idx) => {
@@ -266,3 +270,6 @@ export const updateSunkShip = (currentHits, opponentShips) => {
     });
     return shipWithSunk;
 };
+
+
+console.log(coordsToIndex);
