@@ -1,3 +1,7 @@
+//SON MUCHAS FUNCIONES INDEPENDIENTES POR LO QUE GENERÉ UN INDICE DE LAS FUNCIONES Y NO DIFERENTES COMPONENTES PARA CADA UNA DE ELLAS. 
+//TAREA PARA MEJORAR EL CODIGO ES HACER COMPONENTES DE TODO Y MÁS LIMPIO EL CÓDIGO.
+
+
 // CON ESTO DELIMITAMOS EL TABLERO Y SUS DIMENSIONES.
 export const BOARD_ROWS = 10;
 export const BOARD_COLUMNS = 10;
@@ -62,7 +66,7 @@ export const entityIndices = (entity) => {
 };
 
 //con esto checkamos alternativas a la posición de los barcos(entidades). Esta función la ocupo con otras tres mas adelante (entityInPlace, placeCpuShipInLayout, updateSunkShip)
-//La idea es ir viendo como 
+//La idea es ir viendo como se pone el barco
 export const entityIndicesCheker = (entity) => {
     let indices = [];
     for (let i = 0; i < entity.length; i++) {
