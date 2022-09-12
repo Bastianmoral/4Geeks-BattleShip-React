@@ -32,7 +32,7 @@ const PlayerScore =  ({
                     <li>{numberOfSuccessfulHits} Ataques en el blanco.</li>
                     <li>{accuracyScore > 0 ? `${accuracyScore}%` : `0%`} Porcentaje de precisión de tus ataques.</li>
                 </ul>
-                <p className="player-tip">El primero en hundir los 5 barcos del oponente es el ganador.</p>
+                <p className="player-tip-1">El primero en hundir los 5 barcos del oponente es el ganador.</p>
                 <button onClick={startAgain}> Reestablecer partida </button>
             </div>
         </div>
